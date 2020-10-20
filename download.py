@@ -42,7 +42,7 @@ for group in groups:
     this_data = {"message_id":message_id, "message": message, "sender":sender, "reply_to":reply_to, "time":time}
     data[group] = pd.DataFrame(this_data)
 
-df = pd.concat(data)
+df = pd.concat(data, keys=groups)
 df.to_pickle("../data/data_medium.pkl")
     
         
