@@ -22,7 +22,7 @@ data = {}
 for group in groups:
     print(f"working on {group}")
     # download last n messages from group
-    last_n = 10000
+    last_n = 100_000
     chat = client.get_messages(group, last_n)
     print("Download finished. Managing data.")
     # define data strucutre for data
